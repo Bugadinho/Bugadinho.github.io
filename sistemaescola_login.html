@@ -1,0 +1,229 @@
+<Html>
+ <Head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store">
+  <meta http-equiv="Pragma" content="no-cache, no-store">
+  <meta http-equiv="expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso8859_1">
+    <Title> Login</Title>
+  <style type="text/css"> 
+  @import "Incl/SistemaEscola.css?12012012155558"; 
+ @media print { @import "Incl/SistemaEscolaImp.css?17012012193126"; }
+  </style>
+ <Script>
+  
+ function Valida() {
+  TeclaShift = false;
+  if ( document.Login.Usuario.value == "" || document.Login.Usuario.value == " " ) {
+     alert("Favor digitar o nome do usuário!");
+     document.Login.Usuario.focus();
+     return false;
+  }
+  if ( document.Login.Senha.value == "" ) {
+     alert("Favor digitar a senha!");
+     document.Login.Senha.focus();
+     return false;
+  }
+  return true; 
+ }
+ 
+ </Script>
+
+ <Script language="JavaScript">
+ function MostrarOcultar (Marcador, Elemento) {
+
+  EstadoAtual = document.getElementById(Elemento).style.display;
+
+  if ( EstadoAtual == "none" ) {
+     MudaEstiloDisplay (Marcador, Elemento, "block");
+  } else {
+     MudaEstiloDisplay (Marcador, Elemento, "none");
+  }
+ }
+
+ function MudaEstiloDisplay(Marcador, Elemento, Estilo) {
+
+  document.getElementById(Elemento).style.display = Estilo;
+
+  if ( Marcador != "" ) {
+     if ( Estilo == "none" ) {
+        document.getElementById(Marcador).setAttribute("src", "Imagens/Mostra.gif");
+     } else {
+        document.getElementById(Marcador).setAttribute("src", "Imagens/Esconde.gif");
+     }
+  }
+ }
+</Script>
+
+ </Head>
+<Body background="Imagens/Fundo.jpg"
+ onLoad="moveTo(0,0);document.Login.Usuario.focus();">
+
+<Table class="BordaExterna">
+<TR Align="center">
+ <TD>
+ 
+ <Table class="SemBorda" Align="center" width="20%">
+ <tr><th class="tabelath" Align="center" colspan="2">
+   <Font size="+2">
+    <B>LOGIN</B>
+   </Font> 
+ </th></tr>
+ <tr><td class="tabelatd" Align="center" colspan="2">
+ 
+   <Form name="Login" method="POST" action="http://168.90.49.209:8008/Autentica.php" OnSubmit="JavaScript:return Valida()">
+    <input type="hidden" value="MjAxLjE0LjM5LjIyMg==" name="Autentica">
+    <br>Usuário:<br> <input type="Text" name="Usuario" size="20%" maxlength="50% onFocus="CampoInsere = 1;"> 
+    <br>Senha:<br>   <input type="Password" value="" name="Senha" size="15%" maxlength="50%" onFocus="CampoInsere = 2;"> <br>
+    <br>
+    <input type="Submit" value="&nbsp&nbsp&nbsp&nbsp Entrar >> &nbsp&nbsp&nbsp&nbsp" name="Entrar" >
+  </form>
+    <Table class="SemBorda" width="100%">
+   <tr><td class="SemBorda" width="90">
+    <A href="javascript:;" onclick="JavaScript:MostrarOcultar('img_MostrarOcultar', 'idTeclado');" Title="Exibe/Oculta teclado virtual">
+    <img id="img_MostrarOcultar" border="0" src="Imagens/Mostra.gif">&nbsp;Teclado&nbsp;virtual</A>
+   </td><td class="SemBorda">&nbsp;
+   </td></tr>
+  </Table>
+  <tr><td class="SemBorda">
+  <Script language="JavaScript">
+
+ 
+ var TecladoMin  = true; 
+ var TeclaShift  = false; 
+ var FormInsere  = 0; 
+ var CampoInsere = 1; 
+ 
+ function MudaTeclado() {
+  if ( TecladoMin ) {
+     document.getElementById("imgTeclado").setAttribute("src", "Imagens/TecladoMai.gif");
+     TecladoMin = false;
+  } else {
+     document.getElementById("imgTeclado").setAttribute("src", "Imagens/TecladoMin.gif");
+     TecladoMin = true;
+  }
+  document.forms[FormInsere].elements[CampoInsere].focus();
+  TeclaShift = false;
+ }
+ 
+ function Insere(Tecla) {
+  if ( Tecla =="Enter" ) {
+     document.forms[FormInsere].submit();
+  } else {
+     if ( !TeclaShift ) {
+        if ( !TecladoMin ) {
+           Tecla = Tecla.toUpperCase();
+        }
+     } else {
+        if ( TecladoMin ) {
+           Tecla = Tecla.toUpperCase();
+        }
+     }
+     document.forms[FormInsere].elements[CampoInsere].value += Tecla;
+  }
+  document.forms[FormInsere].elements[CampoInsere].focus();
+  TeclaShift = false;
+  return true;
+ }
+ 
+ function Apaga(Tecla) {
+  if ( Tecla =="BackSpace" ) {
+     Tamanho = document.forms[FormInsere].elements[CampoInsere].value.length - 1;
+     if ( Tamanho < 1 ) {
+        document.forms[FormInsere].elements[CampoInsere].value = "";
+     } else {
+        document.forms[FormInsere].elements[CampoInsere].value = document.forms[FormInsere].elements[CampoInsere].value.substring(0, Tamanho);
+     }
+  }
+  document.forms[FormInsere].elements[CampoInsere].focus();
+  TeclaShift = false;
+  return true;
+ }
+
+</Script>
+
+ <map name="mapTeclado"> 
+  <area shape="rect" href="javascript:;" COORDS="0,2,40,35" onclick="JavaScript:Insere('`');"> 
+  <area shape="rect" href="javascript:;" COORDS="43,2,83,35" onclick="JavaScript:Insere('1');"> 
+  <area shape="rect" href="javascript:;" COORDS="84,2,124,35" onclick="JavaScript:Insere('2');"> 
+  <area shape="rect" href="javascript:;" COORDS="125,2,165,35" onclick="JavaScript:Insere('3');"> 
+  <area shape="rect" href="javascript:;" COORDS="167,2,207,35" onclick="JavaScript:Insere('4');"> 
+  <area shape="rect" href="javascript:;" COORDS="209,2,249,35" onclick="JavaScript:Insere('5');"> 
+  <area shape="rect" href="javascript:;" COORDS="252,2,292,35" onclick="JavaScript:Insere('6');"> 
+  <area shape="rect" href="javascript:;" COORDS="294,2,334,35" onclick="JavaScript:Insere('7');"> 
+  <area shape="rect" href="javascript:;" COORDS="335,2,375,35" onclick="JavaScript:Insere('8');"> 
+  <area shape="rect" href="javascript:;" COORDS="377,2,417,35" onclick="JavaScript:Insere('9');"> 
+  <area shape="rect" href="javascript:;" COORDS="419,2,459,35" onclick="JavaScript:Insere('0');"> 
+  <area shape="rect" href="javascript:;" COORDS="460,2,500,35" onclick="JavaScript:Insere('-');"> 
+  <area shape="rect" href="javascript:;" COORDS="502,2,539,35" onclick="JavaScript:Insere('=');"> 
+ 
+  <area shape="rect" href="javascript:;" COORDS="2,40,40,69" onclick="JavaScript:Insere('q');"> 
+  <area shape="rect" href="javascript:;" COORDS="43,40,83,69" onclick="JavaScript:Insere('w');"> 
+  <area shape="rect" href="javascript:;" COORDS="84,40,124,69" onclick="JavaScript:Insere('e');"> 
+  <area shape="rect" href="javascript:;" COORDS="125,40,165,69" onclick="JavaScript:Insere('r');"> 
+  <area shape="rect" href="javascript:;" COORDS="167,40,207,69" onclick="JavaScript:Insere('t');"> 
+  <area shape="rect" href="javascript:;" COORDS="209,40,249,69" onclick="JavaScript:Insere('y');"> 
+  <area shape="rect" href="javascript:;" COORDS="252,40,292,69" onclick="JavaScript:Insere('u');"> 
+  <area shape="rect" href="javascript:;" COORDS="294,40,334,69" onclick="JavaScript:Insere('i');"> 
+  <area shape="rect" href="javascript:;" COORDS="335,40,375,69" onclick="JavaScript:Insere('o');"> 
+  <area shape="rect" href="javascript:;" COORDS="377,40,417,69" onclick="JavaScript:Insere('p');"> 
+  <area shape="rect" href="javascript:;" COORDS="419,40,459,69" onclick="JavaScript:Insere('´');"> 
+  <area shape="rect" href="javascript:;" COORDS="460,40,500,69" onclick="JavaScript:Insere('[');"> 
+  <area shape="rect" href="javascript:;" COORDS="502,40,539,69" onclick="JavaScript:Apaga('BackSpace');"> 
+ 
+  <area shape="rect" href="javascript:;" COORDS="2,78,40,105" onclick="JavaScript:Insere('a');"> 
+  <area shape="rect" href="javascript:;" COORDS="43,78,83,105" onclick="JavaScript:Insere('s');"> 
+  <area shape="rect" href="javascript:;" COORDS="84,78,124,105" onclick="JavaScript:Insere('d');"> 
+  <area shape="rect" href="javascript:;" COORDS="125,78,165,105" onclick="JavaScript:Insere('f');"> 
+  <area shape="rect" href="javascript:;" COORDS="167,78,207,105" onclick="JavaScript:Insere('g');"> 
+  <area shape="rect" href="javascript:;" COORDS="209,78,249,105" onclick="JavaScript:Insere('h');"> 
+  <area shape="rect" href="javascript:;" COORDS="252,78,292,105" onclick="JavaScript:Insere('j');"> 
+  <area shape="rect" href="javascript:;" COORDS="294,78,334,105" onclick="JavaScript:Insere('k');"> 
+  <area shape="rect" href="javascript:;" COORDS="335,78,375,105" onclick="JavaScript:Insere('l');"> 
+  <area shape="rect" href="javascript:;" COORDS="377,78,417,105" onclick="JavaScript:Insere('ç');"> 
+  <area shape="rect" href="javascript:;" COORDS="419,78,459,105" onclick="JavaScript:Insere('~');"> 
+  <area shape="rect" href="javascript:;" COORDS="460,78,500,105" onclick="JavaScript:Insere(']');"> 
+ 
+  <area shape="rect" href="javascript:;" COORDS="2,112,40,141" onclick="JavaScript:Insere('|');"> 
+  <area shape="rect" href="javascript:;" COORDS="43,61,83,141" onclick="JavaScript:Insere('z');"> 
+  <area shape="rect" href="javascript:;" COORDS="84,61,124,141" onclick="JavaScript:Insere('x');"> 
+  <area shape="rect" href="javascript:;" COORDS="125,61,165,141" onclick="JavaScript:Insere('c');"> 
+  <area shape="rect" href="javascript:;" COORDS="167,61,207,141" onclick="JavaScript:Insere('v');"> 
+  <area shape="rect" href="javascript:;" COORDS="209,61,249,141" onclick="JavaScript:Insere('b');"> 
+  <area shape="rect" href="javascript:;" COORDS="252,61,292,141" onclick="JavaScript:Insere('n');"> 
+  <area shape="rect" href="javascript:;" COORDS="294,61,334,141" onclick="JavaScript:Insere('m');"> 
+  <area shape="rect" href="javascript:;" COORDS="335,61,375,141" onclick="JavaScript:Insere(',');"> 
+  <area shape="rect" href="javascript:;" COORDS="377,61,417,141" onclick="JavaScript:Insere('.');"> 
+  <area shape="rect" href="javascript:;" COORDS="419,61,459,141" onclick="JavaScript:Insere(';');"> 
+  <area shape="rect" href="javascript:;" COORDS="460,61,500,141" onclick="JavaScript:Insere('/');"> 
+
+  <area shape="rect" href="javascript:;" COORDS="253,148,539,173" onclick="JavaScript:Insere(' ');"> 
+  <area shape="rect" href="javascript:;" COORDS="503,75,539,142" onclick="JavaScript:Insere('Enter');"> 
+
+  <area shape="rect" href="javascript:;" COORDS="2,148,123,173"    onclick="JavaScript:MudaTeclado();"> 
+  <area shape="rect" href="javascript:;" COORDS="127,148,250,173"  onclick="JavaScript:TeclaShift=true;;"> 
+ </map> 
+ 
+ <div id="idTeclado" style="display: none;">
+  <img id="imgTeclado" border="0" src="Imagens/TecladoMin.gif" USEMAP="#mapTeclado">
+ </div>
+ <div style="display: none;">
+  <img src="Imagens/TecladoMin.gif">
+  <img src="Imagens/TecladoMai.gif">
+  <img src="Imagens/Mostra.gif">
+  <img src="Imagens/Esconde.gif">
+ </div>
+  
+ </td></tr>
+ </Table>
+ 
+ 
+ </TD>
+</TR>
+</Table>
+ 
+</Body>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store">
+  <meta http-equiv="Pragma" content="no-cache, no-store">
+  <meta http-equiv="expires" content="Mon, 06 Jan 1990 00:00:01 GMT">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso8859_1">
+  </Html>

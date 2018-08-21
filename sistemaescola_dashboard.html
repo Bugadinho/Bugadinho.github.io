@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Testando interações com o servidor escolar</title>
+		<style type="text/css"> 
+			@import "Incl/SistemaEscola.css?12012012155558"; 
+			@media print { @import "Incl/SistemaEscolaImp.css?17012012193126"; }
+		</style>
+	</head>
+	<body style="background:url(imagens/Fundo.jpg);">
+		<div class="noprint">
+			<p class="barNav" name="MenuSessaoAtual"> 
+			<a title="Encerra a sessão e retorna para tela de Login. &#10;(Recomendado para computadores de uso público ou compartilhado)" href="168.90.49.209:8008/Logout.php">&nbsp;Encerra sessão&nbsp;</a>
+			</p>
+		</div>
+		<div align="center">
+			<iframe name="SistemaEscolaCabAluno" width="90%" height="110px" id="idIFrameCabAluno" src="http://168.90.49.209:8008/CabRespAluno.php" frameborder="0" scrolling="no"> </iframe>
+			<iframe name="SistemaEscola" width="99%" height="99%" id="idIFrameSE" src="http://168.90.49.209:8008/MostraCalendarioEventos.php" frameborder="1" scrolling="Auto" style="height: 650px;"> </iframe>
+		</div>
+	</body>
+</html>
