@@ -14,7 +14,7 @@
 <script src="http://transformice-adventures.com/lib/vanilla-picker.min.js"></script>
 <script src="http://transformice-adventures.com/lib/cjs/c-js.js"></script>
 <script>
-	fetch("/configADV.json?d=" + Date.now())
+	fetch("./configADV.json?d=" + Date.now())
 		.then(function (resp) {
 			return resp.json();
 		}).then(function (config) {
