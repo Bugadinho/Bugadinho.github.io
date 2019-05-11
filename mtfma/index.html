@@ -7,14 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="I_Style.css">
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-<script src="lib/pixi.js"></script>
-<script src="lib/pixi-projection.js"></script>
-<script src="lib/pixi-particles.js"></script>
-<script src="lib/howler.js"></script>
-<script src="lib/vanilla-picker.min.js"></script>
-<script src="lib/cjs/c-js.js"></script>
-<script src="tfma.js"></script>
-</script>
+	<script src="lib/pixi.js"></script>
+	<script src="lib/pixi-projection.js"></script>
+	<script src="lib/pixi-particles.js"></script>
+	<script src="lib/howler.js"></script>
+	<script src="lib/vanilla-picker.min.js"></script>
+	<script src="lib/cjs/c-js.js"></script>
+	<script>
+	fetch("./configADV.json?d=" + Date.now())
+		.then(function (resp) {
+			return resp.json();
+		}).then(function (config) {
+		var script = document.createElement("script");
+		script.onload = function () {
+			window.lancement(config);
+		};
+		script.src = "tfma.js" + config.version;
+		document.head.appendChild(script);
+	});
+	</script>
 </body>
 </html>
 
