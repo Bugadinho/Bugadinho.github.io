@@ -809,6 +809,13 @@
       "time": "2018-08-29T12:57:19+00:00",
       "releaseTime": "2017-10-25T14:43:50+00:00"
     },
+	{
+      "id": "1.12.2-forge",
+      "type": "release",
+      "url": "http://bugadinhogamers.github.io/mc_dl_server/packages/1.12.2-forge1.12.2-14.23.5.2838.json",
+      "time": "2018-08-29T12:54:21+00:00",
+      "releaseTime": "2017-09-18T08:39:46+00:00"
+    },
     {
       "id": "1.12.2",
       "type": "release",
