@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1563675357
+#1563719011
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -84,6 +84,9 @@ resources/images/donutplaypls-sheet0.png
 resources/images/sprite3-sheet0.png
 resources/images/titlesonic-sheet0.png
 resources/images/titlesonic-sheet1.png
+resources/images/mobileleft-sheet0.png
+resources/images/mobileright-sheet0.png
+resources/images/mobilejump-sheet0.png
 resources/media/dashrelease.m4a
 resources/media/dashrelease.ogg
 resources/media/bubblebounce.m4a

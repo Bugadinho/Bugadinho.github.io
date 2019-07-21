@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1563675357,
+	"version": 1563719011,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -85,6 +85,9 @@
 		"resources/images/sprite3-sheet0.png",
 		"resources/images/titlesonic-sheet0.png",
 		"resources/images/titlesonic-sheet1.png",
+		"resources/images/mobileleft-sheet0.png",
+		"resources/images/mobileright-sheet0.png",
+		"resources/images/mobilejump-sheet0.png",
 		"resources/media/dashrelease.m4a",
 		"resources/media/dashrelease.ogg",
 		"resources/media/bubblebounce.m4a",
