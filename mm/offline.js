@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1563811326,
+	"version": 1567701437,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -89,6 +89,8 @@
 		"resources/images/mobileleft-sheet0.png",
 		"resources/images/mobileright-sheet0.png",
 		"resources/images/mobilejump-sheet0.png",
+		"resources/images/erroreggman-sheet0.png",
+		"resources/images/segalogo-sheet0.png",
 		"resources/media/dashrelease.m4a",
 		"resources/media/dashrelease.ogg",
 		"resources/media/bubblebounce.m4a",
@@ -171,6 +173,8 @@
 		"resources/media/eggreverie.ogg",
 		"resources/media/timewarp.ogg",
 		"resources/media/countdown.ogg",
+		"resources/media/sonic_3_-_no_way.m4a",
+		"resources/media/sonic_3_-_no_way.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
