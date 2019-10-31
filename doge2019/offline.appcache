@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1570896718
+#1572550078
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -7,6 +7,7 @@ offlineClient.js
 resources/images/dbgcollision-sheet0.png
 resources/images/doge-sheet0.png
 resources/images/p90-sheet0.png
+resources/images/p90-sheet1.png
 resources/images/muzzle-sheet0.png
 resources/images/bullet-sheet0.png
 resources/images/bullet_case-sheet0.png
@@ -39,6 +40,14 @@ resources/images/sprite3-sheet0.png
 resources/images/sprite4-sheet0.png
 resources/images/nowloading-sheet0.png
 resources/images/sprite5-sheet0.png
+resources/images/logo-sheet0.png
+resources/images/campaign-sheet0.png
+resources/images/menufadething-sheet0.png
+resources/images/explosionlens-sheet0.png
+resources/images/bossbody-sheet0.png
+resources/images/bosshead-sheet0.png
+resources/images/trophy-sheet0.png
+resources/images/omegalens-sheet0.png
 resources/media/p90_01.m4a
 resources/media/p90_01.ogg
 resources/media/p90_02.m4a
@@ -67,6 +76,14 @@ resources/media/explosaoo_du_karaio_mt_loca_wow.m4a
 resources/media/explosaoo_du_karaio_mt_loca_wow.ogg
 resources/media/exprosione.m4a
 resources/media/exprosione.ogg
+resources/media/gauss_spinup.m4a
+resources/media/gauss_spinup.ogg
+resources/media/single_overcharged01.m4a
+resources/media/single_overcharged01.ogg
+resources/media/gauss_overcharged.m4a
+resources/media/gauss_overcharged.ogg
+resources/media/gauss_undercharge.m4a
+resources/media/gauss_undercharge.ogg
 resources/media/dogecoin_caralho_so_q_melhorado%20(1).m4a
 resources/media/dogecoin_caralho_so_q_melhorado%20(1).ogg
 resources/media/doom%20-%20at%20dooms%20gate%20e1m1%20remake%20by%20andrew%20hulshult%20(brutal%20doom%20v2.0%20trailer%20theme).m4a
@@ -84,6 +101,12 @@ resources/media/pl_fallpain1.ogg
 resources/media/arabic_nokia_ringtone_melody_only.ogg
 resources/media/suite_da_vitoria.m4a
 resources/media/suite_da_vitoria.ogg
+resources/media/mainmenu.m4a
+resources/media/mainmenu.ogg
+resources/media/xen-gargathon.m4a
+resources/media/xen-gargathon.ogg
+resources/media/bms%20-%20qe2.m4a
+resources/media/bms%20-%20qe2.ogg
 icon-16.png
 icon-32.png
 icon-114.png
