@@ -1,11 +1,13 @@
 ﻿CACHE MANIFEST
-#1572550078
+#1572654898
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
 offlineClient.js
 resources/images/dbgcollision-sheet0.png
 resources/images/doge-sheet0.png
+resources/images/doge-sheet1.png
+resources/images/doge-sheet2.png
 resources/images/p90-sheet0.png
 resources/images/p90-sheet1.png
 resources/images/muzzle-sheet0.png
@@ -36,7 +38,7 @@ resources/images/ammobox-sheet0.png
 resources/images/cromch-sheet0.png
 resources/images/sprite2-sheet0.png
 resources/images/menubg-sheet0.png
-resources/images/sprite3-sheet0.png
+resources/images/lose_gravy-sheet0.png
 resources/images/sprite4-sheet0.png
 resources/images/nowloading-sheet0.png
 resources/images/sprite5-sheet0.png
@@ -48,6 +50,10 @@ resources/images/bossbody-sheet0.png
 resources/images/bosshead-sheet0.png
 resources/images/trophy-sheet0.png
 resources/images/omegalens-sheet0.png
+resources/images/lose_doge-sheet0.png
+resources/images/fogareughost-sheet0.png
+resources/images/nicejobretard-sheet0.png
+resources/images/aeiou-sheet0.png
 resources/media/p90_01.m4a
 resources/media/p90_01.ogg
 resources/media/p90_02.m4a
@@ -84,6 +90,18 @@ resources/media/gauss_overcharged.m4a
 resources/media/gauss_overcharged.ogg
 resources/media/gauss_undercharge.m4a
 resources/media/gauss_undercharge.ogg
+resources/media/single01.m4a
+resources/media/single01.ogg
+resources/media/single02.m4a
+resources/media/single02.ogg
+resources/media/single03.m4a
+resources/media/single03.ogg
+resources/media/bell.m4a
+resources/media/bell.ogg
+resources/media/hev_logon.m4a
+resources/media/hev_logon.ogg
+resources/media/seek_medic.m4a
+resources/media/seek_medic.ogg
 resources/media/dogecoin_caralho_so_q_melhorado%20(1).m4a
 resources/media/dogecoin_caralho_so_q_melhorado%20(1).ogg
 resources/media/doom%20-%20at%20dooms%20gate%20e1m1%20remake%20by%20andrew%20hulshult%20(brutal%20doom%20v2.0%20trailer%20theme).m4a
@@ -107,6 +125,8 @@ resources/media/xen-gargathon.m4a
 resources/media/xen-gargathon.ogg
 resources/media/bms%20-%20qe2.m4a
 resources/media/bms%20-%20qe2.ogg
+resources/media/hl2_song16.m4a
+resources/media/hl2_song16.ogg
 icon-16.png
 icon-32.png
 icon-114.png
